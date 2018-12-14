@@ -1,0 +1,25 @@
+<!---USO DEL ngIF OJO y ngFOR-->
+<div class="row">
+    <div class="col">
+        <div *ngIf="mostrar" class="card bg-light mb-3" style="width:100%">
+            <div class="card-header">*ngIf</div>
+            <div class="card-body">
+                <h5 class="card-title">{{phrase.author}}</h5>
+                <p class="card-text">{{phrase.message}}</p>
+            </div>
+        </div>
+        <button (click)=" mostrar = !mostrar" class="btn btn-outline-primary btn-block"> show/hide </button>
+    </div>
+    <div class="col">
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">*ngFor</div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li *ngFor="let personaje of personajes; let i = index" lass="list-group-item">{{personaje}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>
